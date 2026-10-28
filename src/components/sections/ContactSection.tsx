@@ -237,3 +237,4 @@ export const ContactSection: React.FC<{ onOpenModal: () => void }> = ({ onOpenMo
     </section>
   );
 };
+

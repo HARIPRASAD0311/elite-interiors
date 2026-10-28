@@ -106,29 +106,51 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExplore, onConsultat
       */}
       <div className="bg-[#FAF7F2] py-20 sm:py-28 px-6 sm:px-10 lg:px-14 border-b border-[#EAE3D6]">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl"
-          >
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#1C1A17] font-normal tracking-tight mb-6">
-              Our Philosophy
-            </h2>
-            <p className="text-[#59554E] text-base sm:text-lg font-light leading-relaxed mb-8">
-              We believe your home should be a reflection of who you are, we appreciate elegance and tastefully placed details. We appreciate elegance and tastefully placed team to create the luxury concept.
-            </p>
-            <button
-              type="button"
-              onClick={() => handleScrollTo('portfolio')}
-              className="btn-gold px-7 py-3 rounded-full text-xs font-medium tracking-wider"
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            {/* Philosophy Content Left */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-7"
             >
-              View All Projects
-            </button>
-          </motion.div>
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#1C1A17] font-normal tracking-tight mb-6">
+                Our Philosophy
+              </h2>
+              <p className="text-[#59554E] text-base sm:text-lg font-light leading-relaxed mb-8 max-w-xl">
+                We believe your home should be a reflection of who you are, we appreciate elegance and tastefully placed details. We appreciate elegance and tastefully placed team to create the luxury concept.
+              </p>
+              <button
+                type="button"
+                onClick={() => handleScrollTo('portfolio')}
+                className="btn-gold px-7 py-3 rounded-full text-xs font-medium tracking-wider"
+              >
+                View All Projects
+              </button>
+            </motion.div>
+
+            {/* Philosophy Supplied Image Right */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="lg:col-span-5"
+            >
+              <div className="rounded-2xl overflow-hidden shadow-sm bg-[#EFE9DF] border border-[#E5DFD4] aspect-[4/5] max-h-[460px] w-full">
+                <img
+                  src="/images/philosophy.jpg"
+                  alt="Elite Interiors Design Philosophy"
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
   );
 };
+

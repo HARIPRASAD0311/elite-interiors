@@ -37,10 +37,10 @@ export const StorySection: React.FC<StorySectionProps> = ({ onLearnMore }) => {
           {/* Team Photo Left */}
           <div className="rounded-2xl overflow-hidden shadow-sm bg-[#EFE9DF] border border-[#E5DFD4] h-[360px] sm:h-[450px]">
             <img
-              src="/images/story-team-meeting.jpg"
-              alt="Elite Interiors Design Team Meeting"
+              src="/images/our-story.jpg"
+              alt="Elite Interiors Design Studio — Our Story"
               loading="lazy"
-              className="w-full h-full object-cover filter contrast-[1.03]"
+              className="w-full h-full object-cover filter contrast-[1.02]"
             />
           </div>
 
@@ -86,8 +86,8 @@ export const StorySection: React.FC<StorySectionProps> = ({ onLearnMore }) => {
             {/* Team Portraits Photo Left */}
             <div className="rounded-2xl overflow-hidden shadow-sm bg-[#EFE9DF] border border-[#E5DFD4] h-[320px] sm:h-[380px]">
               <img
-                src="/images/story-team-legacy.jpg"
-                alt="Elite Interiors Architecture Studio and Team"
+                src="/images/meet-the-team.jpg"
+                alt="Elite Interiors Architecture Team — Meet the Team"
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
@@ -114,3 +114,4 @@ export const StorySection: React.FC<StorySectionProps> = ({ onLearnMore }) => {
     </section>
   );
 };
+

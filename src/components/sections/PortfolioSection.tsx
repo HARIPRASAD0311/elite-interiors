@@ -15,7 +15,7 @@ const portfolioItems: PortfolioItem[] = [
     title: 'The Grand Penthouse',
     category: 'Residential',
     image: '/images/portfolio-penthouse-1.jpg',
-    aspect: 'aspect-[4/5]',
+    aspect: 'aspect-[3/4]',
   },
   {
     id: 'p2',
@@ -29,42 +29,42 @@ const portfolioItems: PortfolioItem[] = [
     title: 'Luxury Bedroom',
     category: 'Residential',
     image: '/images/portfolio-bedroom-1.jpg',
-    aspect: 'aspect-[4/3]',
+    aspect: 'aspect-[4/5]',
   },
   {
     id: 'p4',
     title: 'The Grand Penthouse',
     category: 'Residential',
     image: '/images/portfolio-dining.jpg',
-    aspect: 'aspect-[4/5]',
+    aspect: 'aspect-[3/4]',
   },
   {
     id: 'p5',
     title: 'Luxury Bedroom',
     category: 'Residential',
     image: '/images/portfolio-bedroom-2.jpg',
-    aspect: 'aspect-[4/3]',
+    aspect: 'aspect-[1/1]',
   },
   {
     id: 'p6',
     title: 'The Grand Penthouse',
     category: 'Commercial',
     image: '/images/portfolio-penthouse-2.jpg',
-    aspect: 'aspect-[4/5]',
+    aspect: 'aspect-[4/3]',
   },
   {
     id: 'p7',
     title: 'Contemporary Haven',
     category: 'Commercial',
     image: '/images/portfolio-living.jpg',
-    aspect: 'aspect-[4/3]',
+    aspect: 'aspect-[16/10]',
   },
   {
     id: 'p8',
     title: 'Luxury Bedroom',
     category: 'Bespoke',
     image: '/images/portfolio-lounge.jpg',
-    aspect: 'aspect-[4/3]',
+    aspect: 'aspect-[3/4]',
   },
   {
     id: 'p9',
@@ -123,21 +123,18 @@ export const PortfolioSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Gallery Grid matching reference image cards */}
-        <motion.div 
-          layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7"
-        >
+        {/* Irregular, Editorial-Style Masonry Gallery */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 sm:gap-7 [column-fill:_balance]">
           <AnimatePresence>
             {filteredItems.map((item) => (
               <motion.div
                 key={item.id}
                 layout
-                initial={{ opacity: 0, scale: 0.95 }}
+                initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
+                exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.35 }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm bg-[#EFE9DF] border border-[#E4DDD0]"
+                className="break-inside-avoid mb-6 sm:mb-7 group relative rounded-2xl overflow-hidden shadow-sm bg-[#EFE9DF] border border-[#E4DDD0]"
               >
                 <div className={`w-full ${item.aspect} overflow-hidden relative`}>
                   <img
@@ -160,8 +157,9 @@ export const PortfolioSection: React.FC = () => {
               </motion.div>
             ))}
           </AnimatePresence>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 };
+
