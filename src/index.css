@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF7F2;
+    color: #1C1A17;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-serif-title {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom Gold Button matching reference */
+.btn-gold {
+  background: linear-gradient(135deg, #D7B174 0%, #BA9158 100%);
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(186, 145, 88, 0.25);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #E0BE83 0%, #C49B5F 100%);
+  box-shadow: 0 6px 20px rgba(186, 145, 88, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-gold:active {
+  transform: translateY(0);
+}
+
+/* Gold Heading styling matching reference */
+.heading-gold {
+  color: #BA9158;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
